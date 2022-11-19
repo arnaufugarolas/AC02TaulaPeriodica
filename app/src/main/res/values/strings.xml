@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AC02 Taula periódica</string>
+    <string name="EIName">Name:</string>
+    <string name="EIAtomicMass">Atomic mass:</string>
+    <string name="EINumber">Number:</string>
+    <string name="favorite">Favorite</string>
 </resources>

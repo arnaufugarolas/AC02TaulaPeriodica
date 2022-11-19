@@ -5,6 +5,23 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="solid">#FF000000</color>
+    <color name="liquid">#FF0000DD</color>
+    <color name="gas">#FF990000</color>
+    <color name="unknown">#FF666666</color>
+
+    <color name="alkali">#FFEACE5D</color>
+    <color name="alkaline">#FFF1F165</color>
+    <color name="lanthanoid">#FFE8D19C</color>
+    <color name="actinoid">#FFF5CCDA</color>
+    <color name="transition">#FFFAC5B7</color>
+    <color name="poor">#FFACDFEC</color>
+    <color name="metalloid">#FF9EE5D4</color>
+    <color name="nonmetal">#FF8CED8C</color>
+    <color name="noble">#FFE5BDE5</color>
+    <color name="no_category">#FFEEEEEE</color>
 </resources>

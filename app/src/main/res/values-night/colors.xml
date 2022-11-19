@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="solid">#FFB5B5B5</color>
+    <color name="liquid">#FF9999FF</color>
+    <color name="gas">#FFFF4444</color>
+    <color name="unknown">#FF777777</color>
+
+    <color name="alkali">#FF6C3B01</color>
+    <color name="alkaline">#FF846011</color>
+    <color name="lanthanoid">#FF402C17</color>
+    <color name="actinoid">#FF732E4C</color>
+    <color name="transition">#FF711019</color>
+    <color name="poor">#FF003666</color>
+    <color name="metalloid">#FF015146</color>
+    <color name="nonmetal">#FF3E6418</color>
+    <color name="noble">#FF3A2151</color>
+    <color name="no_category">#FF222222</color>
+</resources>

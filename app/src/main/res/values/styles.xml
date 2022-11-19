@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LayoutMM">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="LayoutWW">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="LayoutMW">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="LayoutWM">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="Layout00">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+    <style name="Layout0W">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Row" parent="LayoutWW">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="Column" parent="LayoutWW">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Symbol" parent="Layout00">
+        <item name="android:maxLines">1</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Element" parent="Layout0W">
+        <item name="android:maxLines">1</item>
+        <item name="android:autoSizeTextType">uniform</item>
+    </style>
+
+    <style name="ElementName" parent="Element">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ElementData" parent="Element">
+        <item name="android:textAlignment">textEnd</item>
+    </style>
+
+    <style name="SolidSymbol" parent="Symbol">
+        <item name="android:textColor">@color/solid</item>
+    </style>
+
+    <style name="LiquidSymbol" parent="Symbol">
+        <item name="android:textColor">@color/liquid</item>
+    </style>
+
+    <style name="GasSymbol" parent="Symbol">
+        <item name="android:textColor">@color/gas</item>
+    </style>
+
+    <style name="UnknownSymbol" parent="Symbol">
+        <item name="android:textColor">@color/unknown</item>
+    </style>
+
+    <style name="Alkali" parent="LayoutMW">
+        <item name="android:background">@color/alkali</item>
+    </style>
+
+    <style name="Alkaline" parent="LayoutMW">
+        <item name="android:background">@color/alkaline</item>
+    </style>
+
+    <style name="Lanthanoid" parent="LayoutMW">
+        <item name="android:background">@color/lanthanoid</item>
+    </style>
+
+    <style name="Actinoid" parent="LayoutMW">
+        <item name="android:background">@color/actinoid</item>
+    </style>
+
+    <style name="Transition" parent="LayoutMW">
+        <item name="android:background">@color/transition</item>
+    </style>
+
+    <style name="Poor" parent="LayoutMW">
+        <item name="android:background">@color/poor</item>
+    </style>
+
+    <style name="Metalloid" parent="LayoutMW">
+        <item name="android:background">@color/metalloid</item>
+    </style>
+
+    <style name="Nonmetal" parent="LayoutMW">
+        <item name="android:background">@color/nonmetal</item>
+    </style>
+
+    <style name="Noble" parent="LayoutMW">
+        <item name="android:background">@color/noble</item>
+    </style>
+
+    <style name="NoCategory" parent="LayoutMW">
+        <item name="android:background">@color/no_category</item>
+    </style>
+</resources>
