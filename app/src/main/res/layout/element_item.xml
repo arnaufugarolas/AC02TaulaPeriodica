@@ -1,139 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/NoCategory">
+    style="@style/LayoutMW">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/GColumn00"
-        style="@style/Column"
-        app:layout_constraintGuide_percent="0" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/CLItem"
+        style="@style/NoCategory">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/GColumn01"
-        style="@style/Column"
-        app:layout_constraintGuide_percent="0.2" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GColumn00"
+            style="@style/Column"
+            app:layout_constraintGuide_percent="0" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/GColumn02"
-        style="@style/Column"
-        app:layout_constraintGuide_percent="0.45" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GColumn01"
+            style="@style/Column"
+            app:layout_constraintGuide_percent="0.2" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/GColumn03"
-        style="@style/Column"
-        app:layout_constraintGuide_percent="0.8" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GColumn02"
+            style="@style/Column"
+            app:layout_constraintGuide_percent="0.45" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/GColumn04"
-        style="@style/Column"
-        app:layout_constraintGuide_percent="1" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GColumn03"
+            style="@style/Column"
+            app:layout_constraintGuide_percent="0.8" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/GRow00"
-        style="@style/Row"
-        app:layout_constraintGuide_percent="0" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GColumn04"
+            style="@style/Column"
+            app:layout_constraintGuide_percent="1" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/GRow01"
-        style="@style/Row"
-        app:layout_constraintGuide_percent="0.125" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GRow00"
+            style="@style/Row"
+            app:layout_constraintGuide_percent="0" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/GRow02"
-        style="@style/Row"
-        app:layout_constraintGuide_percent="0.375" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GRow01"
+            style="@style/Row"
+            app:layout_constraintGuide_percent="0.125" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/GRow03"
-        style="@style/Row"
-        app:layout_constraintGuide_percent="0.625" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GRow02"
+            style="@style/Row"
+            app:layout_constraintGuide_percent="0.375" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/GRow04"
-        style="@style/Row"
-        app:layout_constraintGuide_percent="0.875" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GRow03"
+            style="@style/Row"
+            app:layout_constraintGuide_percent="0.625" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/GRow05"
-        style="@style/Row"
-        app:layout_constraintGuide_percent="0.875" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GRow04"
+            style="@style/Row"
+            app:layout_constraintGuide_percent="0.875" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/GRow06"
-        style="@style/Row"
-        app:layout_constraintGuide_percent="1" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GRow05"
+            style="@style/Row"
+            app:layout_constraintGuide_percent="0.875" />
 
-    <TextView
-        android:id="@+id/TVSymbol"
-        style="@style/Symbol"
-        tools:text="Lr"
-        app:layout_constraintBottom_toBottomOf="@id/GRow06"
-        app:layout_constraintEnd_toStartOf="@+id/GColumn01"
-        app:layout_constraintStart_toStartOf="@id/GColumn00"
-        app:layout_constraintTop_toTopOf="@id/GRow00" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GRow06"
+            style="@style/Row"
+            app:layout_constraintGuide_percent="1" />
 
-    <TextView
-        android:id="@+id/TVNumberLabel"
-        style="@style/ElementName"
-        android:text="@string/EINumber"
-        app:layout_constraintBottom_toTopOf="@+id/GRow02"
-        app:layout_constraintEnd_toStartOf="@+id/GColumn02"
-        app:layout_constraintStart_toStartOf="@+id/GColumn01"
-        app:layout_constraintTop_toTopOf="@+id/GRow01" />
+        <TextView
+            android:id="@+id/TVSymbol"
+            style="@style/Symbol"
+            app:layout_constraintBottom_toBottomOf="@id/GRow06"
+            app:layout_constraintEnd_toStartOf="@+id/GColumn01"
+            app:layout_constraintStart_toStartOf="@id/GColumn00"
+            app:layout_constraintTop_toTopOf="@id/GRow00"
+            tools:text="Lr" />
 
-    <TextView
-        android:id="@+id/TVNumberData"
-        style="@style/ElementData"
-        tools:text="103"
-        app:layout_constraintBottom_toTopOf="@+id/GRow02"
-        app:layout_constraintEnd_toStartOf="@+id/GColumn03"
-        app:layout_constraintStart_toStartOf="@+id/GColumn02"
-        app:layout_constraintTop_toTopOf="@+id/GRow01" />
+        <TextView
+            android:id="@+id/TVNumberLabel"
+            style="@style/ElementName"
+            android:text="@string/EINumber"
+            app:layout_constraintBottom_toTopOf="@+id/GRow02"
+            app:layout_constraintEnd_toStartOf="@+id/GColumn02"
+            app:layout_constraintStart_toStartOf="@+id/GColumn01"
+            app:layout_constraintTop_toTopOf="@+id/GRow01" />
 
-    <TextView
-        android:id="@+id/TVNameLabel"
-        style="@style/ElementName"
-        android:text="@string/EIName"
-        app:layout_constraintBottom_toTopOf="@+id/GRow03"
-        app:layout_constraintEnd_toStartOf="@+id/GColumn02"
-        app:layout_constraintStart_toStartOf="@+id/GColumn01"
-        app:layout_constraintTop_toTopOf="@+id/GRow02" />
+        <TextView
+            android:id="@+id/TVNumberData"
+            style="@style/ElementData"
+            app:layout_constraintBottom_toTopOf="@+id/GRow02"
+            app:layout_constraintEnd_toStartOf="@+id/GColumn03"
+            app:layout_constraintStart_toStartOf="@+id/GColumn02"
+            app:layout_constraintTop_toTopOf="@+id/GRow01"
+            tools:text="103" />
 
-    <TextView
-        android:id="@+id/TVNameData"
-        style="@style/ElementData"
-        tools:text="Lawrencium"
-        app:layout_constraintBottom_toTopOf="@+id/GRow03"
-        app:layout_constraintEnd_toStartOf="@+id/GColumn03"
-        app:layout_constraintStart_toStartOf="@+id/GColumn02"
-        app:layout_constraintTop_toTopOf="@+id/GRow02" />
+        <TextView
+            android:id="@+id/TVNameLabel"
+            style="@style/ElementName"
+            android:text="@string/EIName"
+            app:layout_constraintBottom_toTopOf="@+id/GRow03"
+            app:layout_constraintEnd_toStartOf="@+id/GColumn02"
+            app:layout_constraintStart_toStartOf="@+id/GColumn01"
+            app:layout_constraintTop_toTopOf="@+id/GRow02" />
 
-    <TextView
-        android:id="@+id/TVAtomicMassLabel"
-        style="@style/ElementName"
-        android:text="@string/EIAtomicMass"
-        app:layout_constraintBottom_toTopOf="@+id/GRow04"
-        app:layout_constraintEnd_toStartOf="@+id/GColumn02"
-        app:layout_constraintStart_toStartOf="@+id/GColumn01"
-        app:layout_constraintTop_toTopOf="@+id/GRow03" />
+        <TextView
+            android:id="@+id/TVNameData"
+            style="@style/ElementData"
+            app:layout_constraintBottom_toTopOf="@+id/GRow03"
+            app:layout_constraintEnd_toStartOf="@+id/GColumn03"
+            app:layout_constraintStart_toStartOf="@+id/GColumn02"
+            app:layout_constraintTop_toTopOf="@+id/GRow02"
+            tools:text="Lawrencium" />
 
-    <TextView
-        android:id="@+id/TVAtomicMassData"
-        style="@style/ElementData"
-        tools:text="266"
-        app:layout_constraintBottom_toTopOf="@+id/GRow04"
-        app:layout_constraintEnd_toStartOf="@+id/GColumn03"
-        app:layout_constraintStart_toStartOf="@+id/GColumn02"
-        app:layout_constraintTop_toTopOf="@+id/GRow03" />
+        <TextView
+            android:id="@+id/TVAtomicMassLabel"
+            style="@style/ElementName"
+            android:text="@string/EIAtomicMass"
+            app:layout_constraintBottom_toTopOf="@+id/GRow04"
+            app:layout_constraintEnd_toStartOf="@+id/GColumn02"
+            app:layout_constraintStart_toStartOf="@+id/GColumn01"
+            app:layout_constraintTop_toTopOf="@+id/GRow03" />
 
-    <ImageView
-        android:id="@+id/IVFavorite"
-        style="@style/Layout00"
-        android:contentDescription="@string/favorite"
-        app:layout_constraintBottom_toBottomOf="@id/GRow06"
-        app:layout_constraintEnd_toEndOf="@id/GColumn04"
-        app:layout_constraintStart_toStartOf="@+id/GColumn03"
-        app:layout_constraintTop_toTopOf="@id/GRow00"
-        app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/TVAtomicMassData"
+            style="@style/ElementData"
+            app:layout_constraintBottom_toTopOf="@+id/GRow04"
+            app:layout_constraintEnd_toStartOf="@+id/GColumn03"
+            app:layout_constraintStart_toStartOf="@+id/GColumn02"
+            app:layout_constraintTop_toTopOf="@+id/GRow03"
+            tools:text="266" />
+
+        <ImageView
+            android:id="@+id/IVFavorite"
+            style="@style/Layout00"
+            android:contentDescription="@string/favorite"
+            app:layout_constraintBottom_toBottomOf="@id/GRow06"
+            app:layout_constraintEnd_toEndOf="@id/GColumn04"
+            app:layout_constraintStart_toStartOf="@+id/GColumn03"
+            app:layout_constraintTop_toTopOf="@id/GRow00"
+            app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

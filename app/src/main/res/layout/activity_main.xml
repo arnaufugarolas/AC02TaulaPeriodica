@@ -11,7 +11,9 @@
         android:id="@+id/RVElements"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:orientation="vertical"/>
+        android:orientation="vertical"
+        tools:listitem="@layout/element_item"
+        tools:itemCount="5"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

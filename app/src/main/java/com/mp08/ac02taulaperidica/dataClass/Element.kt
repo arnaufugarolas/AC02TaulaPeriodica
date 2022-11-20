@@ -3,7 +3,7 @@ package com.mp08.ac02taulaperidica.dataClass
 import com.google.gson.annotations.SerializedName
 
 
-data class Elements (
+data class Element (
 
   @SerializedName("name"                            ) var name                          : String?        = null,
   @SerializedName("appearance"                      ) var appearance                    : String?        = null,

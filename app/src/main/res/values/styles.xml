@@ -94,19 +94,19 @@
         <item name="android:background">@color/transition</item>
     </style>
 
-    <style name="Poor" parent="LayoutMW">
-        <item name="android:background">@color/poor</item>
+    <style name="Post" parent="LayoutMW">
+        <item name="android:background">@color/post</item>
     </style>
 
     <style name="Metalloid" parent="LayoutMW">
         <item name="android:background">@color/metalloid</item>
     </style>
 
-    <style name="Nonmetal" parent="LayoutMW">
+    <style name="NonMetal" parent="LayoutMW">
         <item name="android:background">@color/nonmetal</item>
     </style>
 
-    <style name="Noble" parent="LayoutMW">
+    <style name="NobleGas" parent="LayoutMW">
         <item name="android:background">@color/noble</item>
     </style>
 

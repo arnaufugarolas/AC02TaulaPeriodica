@@ -1,8 +1,8 @@
 package com.mp08.ac02taulaperidica
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import com.mp08.ac02taulaperidica.dataClass.PeriodicTable
@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.hide()
 
         periodicTable = getPeriodicTable()
 
@@ -20,7 +21,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun main () {
-        val recyclerView = findViewById<View>(R.id.RVElements) as RecyclerView
+        val recyclerview = findViewById<RecyclerView>(R.id.RVElements)
+        recyclerview.layoutManager = LinearLayoutManager(this)
+        val adapter = ElementsAdapter(periodicTable.elements)
+        recyclerview.adapter = adapter
     }
 
     private fun getPeriodicTable(): PeriodicTable {

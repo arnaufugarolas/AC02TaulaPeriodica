@@ -5,6 +5,6 @@ import com.google.gson.annotations.SerializedName
 
 data class PeriodicTable (
 
-  @SerializedName("elements" ) var elements : MutableList<Elements> = mutableListOf()
+  @SerializedName("elements" ) var elements : MutableList<Element> = mutableListOf()
 
 )
