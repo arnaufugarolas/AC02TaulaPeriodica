@@ -24,4 +24,14 @@
     <color name="nonmetal">#FF8CED8C</color>
     <color name="noble">#FFE5BDE5</color>
     <color name="no_category">#FFEEEEEE</color>
+
+    <color name="pantone_2717_c">#FFD8BDF9</color>
+    <color name="pantone_1625_c">#FFFFA696</color>
+    <color name="pantone_2004_c">#FFFCFA74</color>
+    <color name="pantone_0821_c">#FF8BF4D8</color>
+    <color name="pantone_265_c">#FF9263D8</color>
+
+
+
+
 </resources>

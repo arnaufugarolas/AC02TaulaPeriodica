@@ -46,9 +46,6 @@ class MainActivity : AppCompatActivity() {
         val gson = Gson()
         return gson.fromJson(data, PeriodicTable::class.java)
     }
-
-
-
 }
 
 

@@ -45,15 +45,15 @@ class ElementsAdapter(private val mList: MutableList<Element>) :
             else -> Paris.style(holder.item).apply(R.style.NoCategory)
         }
         when(itemsViewModel.favorite){
-            true -> holder.favorite.setImageResource(R.drawable.ic_baseline_favorite_24)
-            false -> holder.favorite.setImageResource(R.drawable.ic_baseline_favorite_border_24)
+            true -> holder.favorite.setImageResource(R.drawable.ic_baseline_bookmark_24)
+            false -> holder.favorite.setImageResource(R.drawable.ic_baseline_bookmark_border_24)
         }
         holder.favorite.setOnClickListener {
             if (itemsViewModel.favorite) {
-                holder.favorite.setImageResource(R.drawable.ic_baseline_favorite_border_24)
+                holder.favorite.setImageResource(R.drawable.ic_baseline_bookmark_border_24)
                 itemsViewModel.favorite = false
             } else {
-                holder.favorite.setImageResource(R.drawable.ic_baseline_favorite_24)
+                holder.favorite.setImageResource(R.drawable.ic_baseline_bookmark_24)
                 itemsViewModel.favorite = true
             }
         }
