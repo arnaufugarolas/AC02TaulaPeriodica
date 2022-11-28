@@ -38,6 +38,6 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.10'
     implementation 'com.airbnb.android:paris:2.0.1'
     implementation 'androidx.databinding:databinding-common:7.3.1'
-    implementation 'com.github.bumptech.glide:glide:4.11.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
 }

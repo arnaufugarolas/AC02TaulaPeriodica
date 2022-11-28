@@ -1,12 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:title="Periodic Table">
+    android:title="@string/periodic_table">
 
     <item
-        android:title="Game"
+        android:title="@string/game"
         app:showAsAction="ifRoom" />
     <item
-        android:title="Filter"
-        app:showAsAction="ifRoom" />
+        android:title="@string/filter"
+        app:showAsAction="always">
+        <menu>
+            <group
+                android:id="@+id/GFilter"
+                android:checkableBehavior="all"
+                android:menuCategory="alternative">
+                <item
+                    android:checkable="true"
+                    android:checked="false"
+                    android:enabled="true"
+                    android:title="@string/favorite" />
+                <item
+                    android:checkable="true"
+                    android:checked="false"
+                    android:enabled="true"
+                    android:title="@string/non_metal" />
+                <item
+                    android:checkable="true"
+                    android:checked="false"
+                    android:enabled="true"
+                    android:title="@string/noble_gas" />
+                <item
+                    android:checkable="true"
+                    android:checked="false"
+                    android:enabled="true"
+                    android:title="@string/alkali" />
+                <item
+                    android:checkable="true"
+                    android:checked="false"
+                    android:enabled="true"
+                    android:title="@string/alkaline" />
+                <item
+                    android:checkable="true"
+                    android:checked="false"
+                    android:enabled="true"
+                    android:title="@string/metalloid" />
+                <item
+                    android:checkable="true"
+                    android:checked="false"
+                    android:enabled="true"
+                    android:title="@string/post" />
+                <item
+                    android:checkable="true"
+                    android:checked="false"
+                    android:enabled="true"
+                    android:title="@string/transition" />
+                <item
+                    android:checkable="true"
+                    android:checked="false"
+                    android:enabled="true"
+                    android:title="@string/lanthanoid" />
+                <item
+                    android:checkable="true"
+                    android:checked="false"
+                    android:enabled="true"
+                    android:title="@string/actinoid" />
+                <item
+                    android:checkable="true"
+                    android:checked="false"
+                    android:enabled="true"
+                    android:title="@string/no_category" />
+            </group>
+        </menu>
+    </item>
 </menu>

@@ -4,4 +4,17 @@
     <string name="EIAtomicMass">Atomic mass:</string>
     <string name="EINumber">Number:</string>
     <string name="favorite">Favorite</string>
+    <string name="game">Game</string>
+    <string name="filter">Filter</string>
+    <string name="non_metal">Non Metal</string>
+    <string name="noble_gas">Noble Gas</string>
+    <string name="alkali">Alkali</string>
+    <string name="alkaline">Alkaline</string>
+    <string name="metalloid">Metalloid</string>
+    <string name="post">Post</string>
+    <string name="transition">Transition</string>
+    <string name="lanthanoid">Lanthanoid</string>
+    <string name="actinoid">Actinoid</string>
+    <string name="no_category">No Category</string>
+    <string name="periodic_table">Periodic Table</string>
 </resources>
