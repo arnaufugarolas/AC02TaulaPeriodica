@@ -6,107 +6,149 @@
     android:layout_height="match_parent"
     tools:context=".ElementDetails">
 
-
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/Column01"
+        android:id="@+id/Column05"
         style="@style/Column"
         app:layout_constraintGuide_percent="0.05" />
 
-
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        style="@style/Column"
-        app:layout_constraintGuide_percent="0.95" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
-        style="@style/Row"
-        app:layout_constraintGuide_percent="0.95" />
-
-
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline7"
-        style="@style/Column"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline9"
+        android:id="@+id/Column275"
         style="@style/Column"
         app:layout_constraintGuide_percent="0.275" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline10"
+        android:id="@+id/Column50"
+        style="@style/Column"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Column725"
         style="@style/Column"
         app:layout_constraintGuide_percent="0.725" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline8"
+        android:id="@+id/Column95"
+        style="@style/Column"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Row25"
         style="@style/Row"
         app:layout_constraintGuide_percent="0.25" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Row95"
+        style="@style/Row"
+        app:layout_constraintGuide_percent="0.95" />
+
+
     <TextView
-        android:id="@+id/TVEDSymbol"
+        android:id="@+id/TVElementSymbol"
         style="@style/Symbol"
-        app:layout_constraintBottom_toTopOf="@+id/guideline8"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintStart_toStartOf="@+id/Column01"
+        app:layout_constraintBottom_toTopOf="@+id/Row25"
+        app:layout_constraintEnd_toStartOf="@+id/Column275"
+        app:layout_constraintStart_toStartOf="@+id/Column05"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Cu" />
 
     <ProgressBar
         android:id="@+id/PBElementDetails"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline8"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        style="@style/Layout00Margin15"
+        app:layout_constraintBottom_toTopOf="@+id/Row25"
+        app:layout_constraintEnd_toStartOf="@+id/Column725"
+        app:layout_constraintStart_toStartOf="@+id/Column275"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/IVEDImage"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline8"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        style="@style/Layout00Margin15"
+        app:layout_constraintBottom_toTopOf="@+id/Row25"
+        app:layout_constraintEnd_toStartOf="@+id/Column725"
+        app:layout_constraintStart_toStartOf="@+id/Column275"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/IVEDLoadError"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="15dp"
-        android:src="@drawable/ic_baseline_cached_24"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/guideline8"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        style="@style/LoadFailed"
+        app:layout_constraintBottom_toTopOf="@+id/Row25"
+        app:layout_constraintEnd_toStartOf="@+id/Column725"
+        app:layout_constraintStart_toStartOf="@+id/Column275"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/IVEDFavorite"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline8"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        style="@style/Layout00"
+        app:layout_constraintBottom_toTopOf="@+id/Row25"
+        app:layout_constraintEnd_toStartOf="@+id/Column95"
+        app:layout_constraintStart_toStartOf="@+id/Column725"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_bookmark_border_24" />
 
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="546dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline8">
+        style="@style/Layout00"
+        app:layout_constraintBottom_toBottomOf="@+id/Row95"
+        app:layout_constraintEnd_toEndOf="@+id/Column95"
+        app:layout_constraintStart_toStartOf="@+id/Column05"
+        app:layout_constraintTop_toTopOf="@+id/Row25">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            style="@style/LayoutMW" >
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/SVColumn40"
+                style="@style/Column"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.45" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/SVRow0"
+                style="@style/Row"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0" />
+
+            <TextView
+                android:id="@+id/TVElementNameLabel"
+                style="@style/ElementName"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/TVElementNumberLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/SVColumn40"
+                tools:text="Element Name:" />
+
+            <TextView
+                android:id="@+id/TVElementNumberLabel"
+                style="@style/ElementName"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementNameLabel"
+                app:layout_constraintBottom_toTopOf="@+id/TVElementAtomicMassLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/SVColumn40"
+                tools:text="Element Number:" />
+
+            <TextView
+                android:id="@+id/TVElementAtomicMassLabel"
+                style="@style/ElementName"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementNumberLabel"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/SVColumn40"
+                tools:text="Atomic Mass:" />
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/TVElementNameData"-->
+<!--                style="@style/ElementData"-->
+<!--                tools:text="Cooper" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/TVElementNumberData"-->
+<!--                style="@style/ElementData"-->
+<!--                tools:text="2" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/TVElementAtomicMassData"-->
+<!--                style="@style/ElementData"-->
+<!--                tools:text="285" />-->
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

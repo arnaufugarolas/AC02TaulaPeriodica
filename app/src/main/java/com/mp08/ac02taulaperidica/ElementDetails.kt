@@ -49,7 +49,7 @@ class ElementDetails : AppCompatActivity() {
         val image = findViewById<ImageView>(R.id.IVEDImage)
         setImageToImageView(image, element.image?.url.toString())
 
-        findViewById<TextView>(R.id.TVEDSymbol).text = element.symbol
+        findViewById<TextView>(R.id.TVElementSymbol).text = element.symbol
         supportActionBar?.title = element.name
     }
 
