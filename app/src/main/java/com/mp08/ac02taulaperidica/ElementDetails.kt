@@ -11,7 +11,6 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
-import com.bumptech.glide.request.target.DrawableImageViewTarget
 import com.bumptech.glide.request.target.Target
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
@@ -19,26 +18,33 @@ import com.mp08.ac02taulaperidica.dataClass.Element
 
 class ElementDetails : AppCompatActivity() {
     private lateinit var element: Element
-    private lateinit var elementImage: ImageView
-    º
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_element_details)
-
-        elementImage = findViewById(R.id.IVEDFavorite)
 
         loadElementDetails()
     }
 
 
     private fun loadElementDetails() {
-        val element = getElementDetails(intent.getStringExtra("element"))
-
+        element = getElementDetails(intent.getStringExtra("element"))
         val favorite = findViewById<ImageView>(R.id.IVEDFavorite)
 
         if (element.favorite) {
             favorite.setImageResource(R.drawable.ic_baseline_bookmark_24)
         } else favorite.setImageResource(R.drawable.ic_baseline_bookmark_border_24)
+
+        favorite.setOnClickListener() {
+            element.favorite = !element.favorite
+            if (element.favorite) {
+                favorite.setImageResource(R.drawable.ic_baseline_bookmark_24)
+                Snackbar.make(it, "Added to favorites", Snackbar.LENGTH_SHORT).show()
+            } else {
+                favorite.setImageResource(R.drawable.ic_baseline_bookmark_border_24)
+                Snackbar.make(it, "Removed from favorites", Snackbar.LENGTH_SHORT).show()
+            }
+        }
 
         val image = findViewById<ImageView>(R.id.IVEDImage)
         setImageToImageView(image, element.image?.url.toString())
@@ -57,26 +63,38 @@ class ElementDetails : AppCompatActivity() {
         return gson.fromJson(element, Element::class.java)
     }
 
-    private fun loadFailed (progressBar: ProgressBar, target: Target<Drawable>?) {
-        progressBar.visibility = ProgressBar.GONE
-        var imageView = (target as DrawableImageViewTarget).view as ImageView
-
-        findViewById<ImageView>(imageView.id).setImageResource(R.drawable.ic_baseline_cached_24)
-        findViewById<ImageView>(R.id.IVEDFavorite).setImageResource(R.drawable.ic_baseline_cached_24)
+    private fun loadFailed(target: ImageView, URL: String, errorImageView: ImageView) {
+        errorImageView.visibility = ImageView.VISIBLE
 
         Snackbar.make(
-            (target as DrawableImageViewTarget).view as ImageView,
+            errorImageView,
             "Error loading the image",
-            Snackbar.LENGTH_LONG
+            Snackbar.LENGTH_SHORT
         ).setBackgroundTint(getColor(R.color.pantone_1625_c))
             .show()
+
+        errorImageView.setOnClickListener {
+            errorImageView.visibility = ImageView.GONE
+            setImageToImageView(target, URL)
+        }
     }
+
+
     private fun setImageToImageView(imageView: ImageView, URL: String) {
         val progressBar = findViewById<ProgressBar>(R.id.PBElementDetails)
+        val errorImage = findViewById<ImageView>(R.id.IVEDLoadError)
+
         progressBar.visibility = ProgressBar.VISIBLE
+        errorImage.visibility = ImageView.GONE
+
+        Snackbar.make(
+            progressBar,
+            "Loading image...",
+            Snackbar.LENGTH_SHORT
+        ).show()
+
         Glide.with(this)
             .load(URL)
-            .timeout(0)
             .listener((object : RequestListener<Drawable> {
                 override fun onLoadFailed(
                     e: GlideException?,
@@ -84,7 +102,8 @@ class ElementDetails : AppCompatActivity() {
                     target: Target<Drawable>?,
                     isFirstResource: Boolean
                 ): Boolean {
-                    loadFailed(progressBar, target)
+                    progressBar.visibility = ProgressBar.GONE
+                    loadFailed(imageView, URL, errorImage)
                     return false
                 }
 
