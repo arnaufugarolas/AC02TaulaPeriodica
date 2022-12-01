@@ -23,20 +23,46 @@ class ElementDetails : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_element_details)
 
+        element = getElementDetails(intent.getStringExtra("element"))
         loadElementDetails()
     }
 
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.element_details_menu, menu)
+        return true
+    }
 
     private fun loadElementDetails() {
-        element = getElementDetails(intent.getStringExtra("element"))
-        val favorite = findViewById<ImageView>(R.id.IVEDFavorite)
+        val image = findViewById<ImageView>(R.id.IVElementImage)
+        val favorite = findViewById<ImageView>(R.id.IVElementFavorite)
+        val symbol = findViewById<TextView>(R.id.TVElementSymbol)
+        val name = findViewById<TextView>(R.id.TVElementNameData)
+        val number = findViewById<TextView>(R.id.TVElementNumberData)
+        val atomicMass = findViewById<TextView>(R.id.TVElementAtomicMassData)
+        val phase = findViewById<TextView>(R.id.TVElementPhaseData)
 
-        if (element.favorite) {
-            favorite.setImageResource(R.drawable.ic_baseline_bookmark_24)
-        } else favorite.setImageResource(R.drawable.ic_baseline_bookmark_border_24)
+        val summary = findViewById<TextView>(R.id.TVElementSummaryData)
 
-        favorite.setOnClickListener() {
+        supportActionBar?.title = element.name
+        setImageToImageView(image, element.image?.url.toString())
+        image.contentDescription =
+            "${element.image?.title.toString()}\n\n${element.image?.attribution.toString()}"
+        favorite.setImageResource(
+            if (element.favorite) R.drawable.ic_baseline_bookmark_24
+            else R.drawable.ic_baseline_bookmark_border_24
+        )
+
+        symbol.text = element.symbol.toString()
+        name.text = element.name.toString()
+        number.text = element.number.toString()
+        atomicMass.text = element.atomicMass.toString()
+        phase.text = element.phase.toString()
+
+        summary.text = element.summary.toString()
+
+        favorite.setOnClickListener {
             element.favorite = !element.favorite
+
             if (element.favorite) {
                 favorite.setImageResource(R.drawable.ic_baseline_bookmark_24)
                 Snackbar.make(it, "Added to favorites", Snackbar.LENGTH_SHORT).show()
@@ -45,52 +71,24 @@ class ElementDetails : AppCompatActivity() {
                 Snackbar.make(it, "Removed from favorites", Snackbar.LENGTH_SHORT).show()
             }
         }
-
-        val image = findViewById<ImageView>(R.id.IVEDImage)
-        setImageToImageView(image, element.image?.url.toString())
-
-        findViewById<TextView>(R.id.TVElementSymbol).text = element.symbol
-        supportActionBar?.title = element.name
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.element_details_menu, menu)
-        return true
-    }
 
     private fun getElementDetails(element: String?): Element {
         val gson = Gson()
         return gson.fromJson(element, Element::class.java)
     }
 
-    private fun loadFailed(target: ImageView, URL: String, errorImageView: ImageView) {
-        errorImageView.visibility = ImageView.VISIBLE
-
-        Snackbar.make(
-            errorImageView,
-            "Error loading the image",
-            Snackbar.LENGTH_SHORT
-        ).setBackgroundTint(getColor(R.color.pantone_1625_c))
-            .show()
-
-        errorImageView.setOnClickListener {
-            errorImageView.visibility = ImageView.GONE
-            setImageToImageView(target, URL)
-        }
-    }
-
 
     private fun setImageToImageView(imageView: ImageView, URL: String) {
         val progressBar = findViewById<ProgressBar>(R.id.PBElementDetails)
-        val errorImage = findViewById<ImageView>(R.id.IVEDLoadError)
+        val errorImage = findViewById<ImageView>(R.id.IVElementLoadError)
 
         progressBar.visibility = ProgressBar.VISIBLE
         errorImage.visibility = ImageView.GONE
 
         Snackbar.make(
-            progressBar,
-            "Loading image...",
-            Snackbar.LENGTH_SHORT
+            progressBar, "Loading image...", Snackbar.LENGTH_SHORT
         ).show()
 
         Glide.with(this)
@@ -119,6 +117,26 @@ class ElementDetails : AppCompatActivity() {
                 }
             }))
             .into(imageView)
+
+
+        Glide.with(this)
+            .load(URL)
+            .into(imageView)
     }
+
+    private fun loadFailed(target: ImageView, URL: String, errorImageView: ImageView) {
+        errorImageView.visibility = ImageView.VISIBLE
+
+        Snackbar.make(
+            errorImageView, "Error loading the image", Snackbar.LENGTH_SHORT
+        ).setBackgroundTint(getColor(R.color.pantone_1625_c)).show()
+
+        errorImageView.setOnClickListener {
+            errorImageView.visibility = ImageView.GONE
+            setImageToImageView(target, URL)
+        }
+    }
+
+
 
 }

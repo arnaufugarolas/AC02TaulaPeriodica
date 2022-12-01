@@ -69,9 +69,6 @@ class ElementsAdapter(private val mList: MutableList<Element>) :
         holder.number.text = itemsViewModel.number.toString()
         holder.name.text = itemsViewModel.name
         holder.atomicMass.text = itemsViewModel.atomicMass.toString()
-
-
-
     }
 
     override fun getItemCount(): Int {

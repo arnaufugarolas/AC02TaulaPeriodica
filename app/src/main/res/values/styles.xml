@@ -30,6 +30,11 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="Layout0M">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
     <style name="LayoutW0">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">0dp</item>
@@ -50,6 +55,13 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="ElementDetails" parent="Layout0M">
+        <item name="android:maxLines">1</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:height">25dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="Element" parent="Layout0W">
         <item name="android:maxLines">1</item>
         <item name="android:autoSizeTextType">uniform</item>
@@ -57,6 +69,7 @@
 
     <style name="ElementName" parent="Element">
         <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
     <style name="ElementData" parent="Element">

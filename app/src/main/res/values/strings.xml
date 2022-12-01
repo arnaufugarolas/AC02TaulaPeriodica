@@ -17,4 +17,26 @@
     <string name="actinoid">Actinoid</string>
     <string name="no_category">No Category</string>
     <string name="periodic_table">Periodic Table</string>
+    <string name="element_name">Element Name:</string>
+    <string name="element_number">Element Number:</string>
+    <string name="atomic_mass">Atomic Mass:</string>
+    <string name="summary">Summary:</string>
+    <string name="element_phase">Element Phase:</string>
+    <string name="element_appearance">Element Appearance:</string>
+    <string name="boiling_point_k">Boiling point (K):</string>
+    <string name="category">Category:</string>
+    <string name="density">Density:</string>
+    <string name="discovered_by">Discovered by:</string>
+    <string name="melting_point">Melting Point:</string>
+    <string name="molar_heat_capacity">Molar heat capacity:</string>
+    <string name="named_by">Named By:</string>
+    <string name="table_period">Table Period:</string>
+    <string name="x_position">X-Position:</string>
+    <string name="y_position">Y-Position:</string>
+    <string name="shells">Shells:</string>
+    <string name="ionization_energies">Ionization Energies:</string>
+    <string name="electronegativity_pauling">Electronegativity Pauling:</string>
+    <string name="electron_affinity">Electron Affinity:</string>
+    <string name="electron_configuration_semantic">Electron Configuration Semantic:</string>
+    <string name="electron_configuration">Electron Configuration:</string>
 </resources>
