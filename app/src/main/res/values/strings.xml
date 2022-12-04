@@ -39,4 +39,10 @@
     <string name="electron_affinity">Electron Affinity:</string>
     <string name="electron_configuration_semantic">Electron Configuration Semantic:</string>
     <string name="electron_configuration">Electron Configuration:</string>
+    <string name="order_by">Order By</string>
+    <string name="symbol">Symbol</string>
+    <string name="number">Number</string>
+    <string name="select_all_categories">Select All Categories</string>
+    <string name="all">All</string>
+    <string name="post_transition">Post-Transition</string>
 </resources>
