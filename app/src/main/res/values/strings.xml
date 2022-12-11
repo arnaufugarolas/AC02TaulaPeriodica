@@ -52,4 +52,6 @@
     <string name="max">Max:</string>
     <string name="score">Score:</string>
     <string name="_0">0</string>
+    <string name="you_lost_the_game">You lost the game</string>
+    <string name="lost_message">The element is %1$s and is in the %2$s phase\nFor more information click it.</string>
 </resources>

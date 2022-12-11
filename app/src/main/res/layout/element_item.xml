@@ -65,7 +65,7 @@
 
         <TextView
             android:id="@+id/TVSymbol"
-            style="@style/ElementItemSymbol"
+            style="@style/GameElementSymbol"
             app:layout_constraintBottom_toBottomOf="@id/GRow100"
             app:layout_constraintEnd_toStartOf="@+id/GColumn20"
             app:layout_constraintStart_toStartOf="@id/GameColumn00"

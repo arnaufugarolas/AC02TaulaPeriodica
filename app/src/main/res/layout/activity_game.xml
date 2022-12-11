@@ -76,66 +76,83 @@
         app:layout_constraintGuide_percent="0.95" /> <!-- Column 95% -->
 
     <TextView
-        android:id="@+id/TVScoreLabel"
-        style="@style/ScoreLabel"
+        android:id="@+id/TVGameActualScoreLabel"
+        style="@style/GameActualScoreLabel"
         app:layout_constraintBottom_toTopOf="@+id/GameRow10"
         app:layout_constraintEnd_toStartOf="@+id/GameColumn275"
         app:layout_constraintStart_toStartOf="@+id/GameColumn05"
         app:layout_constraintTop_toTopOf="parent" /> <!-- Score Label -->
 
     <TextView
-        android:id="@+id/TVScorePoints"
-        style="@style/Score"
+        android:id="@+id/TVGameActualScoreData"
+        style="@style/GameScoreData"
         app:layout_constraintBottom_toTopOf="@+id/GameRow10"
         app:layout_constraintEnd_toStartOf="@+id/GameColumn50"
         app:layout_constraintStart_toStartOf="@+id/GameColumn275"
         app:layout_constraintTop_toTopOf="parent" /> <!-- Score -->
 
     <TextView
-        android:id="@+id/TVMaxLabel"
-        style="@style/MaxLabel"
+        android:id="@+id/TVGameMaxScoreLabel"
+        style="@style/GameMaxScoreLabel"
         app:layout_constraintBottom_toTopOf="@+id/GameRow10"
         app:layout_constraintEnd_toStartOf="@+id/GameColumn725"
         app:layout_constraintStart_toStartOf="@+id/GameColumn50"
         app:layout_constraintTop_toTopOf="parent" /> <!-- Max Label -->
 
     <TextView
-        android:id="@+id/TVMaxPoints"
-        style="@style/Score"
+        android:id="@+id/TVGameMaxScoreData"
+        style="@style/GameScoreData"
         app:layout_constraintBottom_toTopOf="@+id/GameRow10"
         app:layout_constraintEnd_toStartOf="@+id/GameColumn95"
         app:layout_constraintStart_toStartOf="@+id/GameColumn725"
         app:layout_constraintTop_toTopOf="parent" /> <!-- Max Points -->
 
     <TextView
-        android:id="@+id/TVGSymbol"
-        style="@style/ElementItemSymbol"
+        android:id="@+id/TVGameElementSymbol"
+        style="@style/GameElementSymbol"
+        tools:text="Ar"
         app:layout_constraintBottom_toTopOf="@+id/GameRow40"
         app:layout_constraintEnd_toStartOf="@+id/GameColumn75"
         app:layout_constraintStart_toStartOf="@+id/GameColumn25"
         app:layout_constraintTop_toTopOf="@+id/GameRow15" /> <!-- Symbol TextView -->
 
     <Button
-        android:id="@+id/BSolid"
-        style="@style/QuizButtonSolid"
+        android:id="@+id/BGameAnswerSolid"
+        style="@style/GameSolidButton"
         app:layout_constraintBottom_toTopOf="@+id/GameRow616"
         app:layout_constraintEnd_toStartOf="@+id/GameColumn95"
         app:layout_constraintStart_toStartOf="@+id/GameColumn05"
         app:layout_constraintTop_toTopOf="@+id/GameRow45" /> <!-- Solid Button -->
 
     <Button
-        android:id="@+id/BLiquid"
-        style="@style/QuizButtonLiquid"
+        android:id="@+id/BGameAnswerLiquid"
+        style="@style/GameLiquidButton"
         app:layout_constraintBottom_toTopOf="@+id/GameRow783"
         app:layout_constraintEnd_toStartOf="@+id/GameColumn95"
         app:layout_constraintStart_toStartOf="@+id/GameColumn05"
         app:layout_constraintTop_toTopOf="@+id/GameRow616" /> <!-- Liquid Button -->
 
     <Button
-        android:id="@+id/BGas"
-        style="@style/QuizButtonGas"
+        android:id="@+id/BGameRestart"
+        style="@style/GameRestartButton"
+        app:layout_constraintBottom_toTopOf="@+id/GameRow783"
+        app:layout_constraintEnd_toStartOf="@+id/GameColumn95"
+        app:layout_constraintStart_toStartOf="@+id/GameColumn05"
+        app:layout_constraintTop_toTopOf="@+id/GameRow616" /> <!-- Liquid Button -->
+
+    <Button
+        android:id="@+id/BGameAnswerGas"
+        style="@style/GameGasButton"
         app:layout_constraintBottom_toTopOf="@+id/GameRow95"
         app:layout_constraintEnd_toStartOf="@+id/GameColumn95"
         app:layout_constraintStart_toStartOf="@+id/GameColumn05"
         app:layout_constraintTop_toTopOf="@+id/GameRow783" /> <!-- Gas Button -->
+
+    <TextView
+        android:id="@+id/TVGameLostLabel"
+        style="@style/GameLostLabel"
+        app:layout_constraintBottom_toTopOf="@+id/GameRow40"
+        app:layout_constraintEnd_toStartOf="@+id/GameColumn95"
+        app:layout_constraintStart_toStartOf="@+id/GameColumn05"
+        app:layout_constraintTop_toTopOf="@+id/GameRow15" />
 </androidx.constraintlayout.widget.ConstraintLayout>

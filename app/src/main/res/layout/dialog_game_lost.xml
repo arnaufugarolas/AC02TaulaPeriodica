@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LayoutMWV">
+
+    <TextView
+        style="@style/DialogGameLostTitle" />
+
+    <TextView
+        android:id="@+id/TVDialogSymbol"
+        style="@style/LostDialogSymbol" />
+
+    <TextView
+        style="@style/DialogGameLostMessage"
+        android:id="@+id/TVMessage" />
+
+
+</LinearLayout>

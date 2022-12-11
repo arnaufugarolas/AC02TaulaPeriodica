@@ -43,7 +43,7 @@
 
     <TextView
         android:id="@+id/TVElementSymbol"
-        style="@style/ElementItemSymbol"
+        style="@style/GameElementSymbol"
         app:layout_constraintBottom_toTopOf="@+id/Row25"
         app:layout_constraintEnd_toStartOf="@+id/Column275"
         app:layout_constraintStart_toStartOf="@+id/Column05"

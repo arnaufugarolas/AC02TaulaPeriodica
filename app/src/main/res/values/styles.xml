@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="LayoutMM">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
@@ -107,7 +108,7 @@
         <item name="android:src">@drawable/ic_baseline_bookmark_border_24</item>
     </style>
 
-    <style name="ElementItemSymbol" parent="Layout00">
+    <style name="GameElementSymbol" parent="Layout00">
         <item name="android:maxLines">1</item>
         <item name="android:autoSizeTextType">uniform</item>
         <item name="android:gravity">center</item>
@@ -117,19 +118,19 @@
         <item name="android:layout_marginBottom">0dp</item>
     </style>
 
-    <style name="ElementItemSolidSymbol" parent="ElementItemSymbol">
+    <style name="ElementItemSolidSymbol" parent="GameElementSymbol">
         <item name="android:textColor">@color/solid</item>
     </style>
 
-    <style name="ElementItemLiquidSymbol" parent="ElementItemSymbol">
+    <style name="ElementItemLiquidSymbol" parent="GameElementSymbol">
         <item name="android:textColor">@color/liquid</item>
     </style>
 
-    <style name="ElementItemGasSymbol" parent="ElementItemSymbol">
+    <style name="ElementItemGasSymbol" parent="GameElementSymbol">
         <item name="android:textColor">@color/gas</item>
     </style>
 
-    <style name="ElementItemUnknownSymbol" parent="ElementItemSymbol">
+    <style name="ElementItemUnknownSymbol" parent="GameElementSymbol">
         <item name="android:textColor">@color/unknown</item>
     </style>
 
@@ -186,17 +187,22 @@
         <item name="android:padding">25dp</item>
     </style>
 
-    <style name="QuizButtonSolid" parent="QuizButton">
+    <style name="GameSolidButton" parent="QuizButton">
         <item name="android:backgroundTint">@color/solid</item>
         <item name="android:text">@string/solid</item>
     </style>
 
-    <style name="QuizButtonLiquid" parent="QuizButton">
+    <style name="GameLiquidButton" parent="QuizButton">
         <item name="android:backgroundTint">@color/liquid</item>
         <item name="android:text">@string/liquid</item>
     </style>
 
-    <style name="QuizButtonGas" parent="QuizButton">
+    <style name="GameRestartButton" parent="QuizButton">
+        <item name="android:backgroundTint">@color/unknown</item>
+        <item name="android:text">Restart Game</item>
+    </style>
+
+    <style name="GameGasButton" parent="QuizButton">
         <item name="android:backgroundTint">@color/gas</item>
         <item name="android:text">@string/gas</item>
     </style>
@@ -208,19 +214,63 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="ScoreLabel" parent="GameLabel">
+    <style name="GameActualScoreLabel" parent="GameLabel">
         <item name="android:text">@string/score</item>
     </style>
 
-    <style name="MaxLabel" parent="GameLabel">
+    <style name="GameMaxScoreLabel" parent="GameLabel">
         <item name="android:text">@string/max</item>
     </style>
 
-    <style name="Score" parent="Layout00">
+    <style name="GameScoreData" parent="Layout00">
         <item name="android:autoSizeTextType">uniform</item>
         <item name="android:gravity">center</item>
         <item name="android:maxLines">1</item>
         <item name="android:padding">5dp</item>
         <item name="android:text">@string/_0</item>
     </style>
+
+    <style name="GameLostLabel" parent="Layout00">
+        <item name="android:text">@string/you_lost_the_game</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="LayoutMWV" parent="LayoutMW">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="DialogGameLostTitle" parent="LayoutMW">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:height">40dp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:text">@string/you_lost_the_game</item>
+    </style>
+
+    <style name="DialogGameLostMessage" parent="LayoutMW">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:text">@string/lost_message</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:height">90dp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="LostDialogSymbol" parent="LayoutMW">
+        <item name="android:layout_marginRight">90dp</item>
+        <item name="android:layout_marginLeft">90dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:height">200dp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+    </style>
+
+
 </resources>
