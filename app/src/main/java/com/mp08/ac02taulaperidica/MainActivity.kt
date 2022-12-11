@@ -124,7 +124,7 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
-        recyclerView.setItemViewCacheSize(10);
+        recyclerView.setItemViewCacheSize(10)
         setRecycledViewValues()
     }
 
