@@ -2,7 +2,6 @@ package com.mp08.ac02taulaperidica
 
 import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.view.Menu
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -26,11 +25,6 @@ class ElementDetails : AppCompatActivity() {
         setContentView(R.layout.activity_element_details)
         element = getElementDetails(intent.getStringExtra("element"))
         loadElementDetails()
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.element_details_menu, menu)
-        return true
     }
 
     private fun loadElementDetails() {
