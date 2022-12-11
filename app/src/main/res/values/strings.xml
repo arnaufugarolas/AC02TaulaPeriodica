@@ -45,4 +45,11 @@
     <string name="select_all_categories">Select All Categories</string>
     <string name="all">All</string>
     <string name="post_transition">Post-Transition</string>
+    <string name="unknown">Unknown</string>
+    <string name="gas">Gas</string>
+    <string name="liquid">Liquid</string>
+    <string name="solid">Solid</string>
+    <string name="max">Max:</string>
+    <string name="score">Score:</string>
+    <string name="_0">0</string>
 </resources>

@@ -4,9 +4,11 @@
     android:title="@string/periodic_table">
 
     <item
+        android:id="@+id/MIGame"
         android:title="@string/game"
         app:showAsAction="ifRoom" />
     <item
+        android:id="@+id/MIFilter"
         android:title="@string/filter"
         app:showAsAction="ifRoom">
         <menu>
@@ -23,73 +25,63 @@
                 <item
                     android:id="@+id/MIAll"
                     android:checkable="true"
-                    android:checked="true"
                     android:enabled="true"
                     android:title="@string/all" />
                 <item
                     android:id="@+id/MINonMetal"
                     android:checkable="true"
-                    android:checked="true"
                     android:enabled="true"
                     android:title="@string/non_metal" />
                 <item
                     android:id="@+id/MINobleGas"
                     android:checkable="true"
-                    android:checked="true"
                     android:enabled="true"
                     android:title="@string/noble_gas" />
                 <item
                     android:id="@+id/MIAlkali"
                     android:checkable="true"
-                    android:checked="true"
                     android:enabled="true"
                     android:title="@string/alkali" />
                 <item
                     android:id="@+id/MIAlkaline"
                     android:checkable="true"
-                    android:checked="true"
                     android:enabled="true"
                     android:title="@string/alkaline" />
                 <item
                     android:id="@+id/MIMetalloid"
                     android:checkable="true"
-                    android:checked="true"
                     android:enabled="true"
                     android:title="@string/metalloid" />
                 <item
                     android:id="@+id/MIPostTransition"
                     android:checkable="true"
-                    android:checked="true"
                     android:enabled="true"
                     android:title="@string/post_transition" />
                 <item
                     android:id="@+id/MITransition"
                     android:checkable="true"
-                    android:checked="true"
                     android:enabled="true"
                     android:title="@string/transition" />
                 <item
                     android:id="@+id/MILanthanoid"
                     android:checkable="true"
-                    android:checked="true"
                     android:enabled="true"
                     android:title="@string/lanthanoid" />
                 <item
                     android:id="@+id/MIActinoid"
                     android:checkable="true"
-                    android:checked="true"
                     android:enabled="true"
                     android:title="@string/actinoid" />
                 <item
                     android:id="@+id/MINoCategory"
                     android:checkable="true"
-                    android:checked="true"
                     android:enabled="true"
                     android:title="@string/no_category" />
             </group>
         </menu>
     </item>
     <item
+        android:id="@+id/MIOrderBy"
         android:title="@string/order_by"
         app:showAsAction="ifRoom">
         <menu>
@@ -98,10 +90,12 @@
                 android:checkableBehavior="single"
                 android:menuCategory="alternative">
                 <item
+                    android:id="@+id/MINumber"
                     android:checked="true"
                     android:enabled="true"
                     android:title="@string/number" />
                 <item
+                    android:id="@+id/MISymbol"
                     android:checked="false"
                     android:enabled="true"
                     android:title="@string/symbol" />

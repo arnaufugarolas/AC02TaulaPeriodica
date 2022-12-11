@@ -2,146 +2,136 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/LayoutMW"
-    app:cardCornerRadius="0dp"
-    app:cardElevation="0dp"
-    app:cardMaxElevation="0dp">
+    style="@style/LayoutMW">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/CLItem"
         style="@style/NoCategory">
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/GColumn00"
+            android:id="@+id/GameColumn00"
             style="@style/Column"
-            app:layout_constraintGuide_percent="0" />
+            app:layout_constraintGuide_percent="0" /> <!-- Column 0% -->
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/GColumn01"
+            android:id="@+id/GColumn20"
             style="@style/Column"
-            app:layout_constraintGuide_percent="0.2" />
+            app:layout_constraintGuide_percent="0.2" />  <!-- Column 20% -->
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/GColumn02"
+            android:id="@+id/GColumn50"
             style="@style/Column"
-            app:layout_constraintGuide_percent="0.45" />
+            app:layout_constraintGuide_percent="0.50" /> <!-- Column 55% -->
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/GColumn03"
+            android:id="@+id/GColumn80"
             style="@style/Column"
-            app:layout_constraintGuide_percent="0.8" />
+            app:layout_constraintGuide_percent="0.8" /> <!-- Column 80% -->
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/GColumn04"
+            android:id="@+id/GColumn100"
             style="@style/Column"
-            app:layout_constraintGuide_percent="1" />
+            app:layout_constraintGuide_percent="1" /> <!-- Column 100% -->
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/GRow00"
             style="@style/Row"
-            app:layout_constraintGuide_percent="0" />
+            app:layout_constraintGuide_percent="0" /> <!-- Row 0% -->
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/GRow01"
+            android:id="@+id/GRow0125"
             style="@style/Row"
-            app:layout_constraintGuide_percent="0.125" />
+            app:layout_constraintGuide_percent="0.125" /> <!-- Row 12.5% -->
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/GRow02"
+            android:id="@+id/GRow375"
             style="@style/Row"
-            app:layout_constraintGuide_percent="0.375" />
+            app:layout_constraintGuide_percent="0.375" /> <!-- Row 37.5% -->
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/GRow03"
+            android:id="@+id/GRow625"
             style="@style/Row"
-            app:layout_constraintGuide_percent="0.625" />
+            app:layout_constraintGuide_percent="0.625" /> <!-- Row 62.5% -->
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/GRow04"
+            android:id="@+id/GRow875"
             style="@style/Row"
-            app:layout_constraintGuide_percent="0.875" />
+            app:layout_constraintGuide_percent="0.875" /> <!-- Row 87.5% -->
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/GRow05"
+            android:id="@+id/GRow100"
             style="@style/Row"
-            app:layout_constraintGuide_percent="0.875" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/GRow06"
-            style="@style/Row"
-            app:layout_constraintGuide_percent="1" />
+            app:layout_constraintGuide_percent="1" /> <!-- Row 100% -->
 
         <TextView
             android:id="@+id/TVSymbol"
-            style="@style/Symbol"
-            app:layout_constraintBottom_toBottomOf="@id/GRow06"
-            app:layout_constraintEnd_toStartOf="@+id/GColumn01"
-            app:layout_constraintStart_toStartOf="@id/GColumn00"
+            style="@style/ElementItemSymbol"
+            app:layout_constraintBottom_toBottomOf="@id/GRow100"
+            app:layout_constraintEnd_toStartOf="@+id/GColumn20"
+            app:layout_constraintStart_toStartOf="@id/GameColumn00"
             app:layout_constraintTop_toTopOf="@id/GRow00"
-            tools:text="Lr" />
+            tools:text="Lr" /> <!-- Symbol -->
 
         <TextView
             android:id="@+id/TVNumberLabel"
-            style="@style/ElementName"
+            style="@style/ElementItemName"
             android:text="@string/EINumber"
-            app:layout_constraintBottom_toTopOf="@+id/GRow02"
-            app:layout_constraintEnd_toStartOf="@+id/GColumn02"
-            app:layout_constraintStart_toStartOf="@+id/GColumn01"
-            app:layout_constraintTop_toTopOf="@+id/GRow01" />
+            app:layout_constraintBottom_toTopOf="@+id/GRow375"
+            app:layout_constraintEnd_toStartOf="@+id/GColumn50"
+            app:layout_constraintStart_toStartOf="@+id/GColumn20"
+            app:layout_constraintTop_toTopOf="@+id/GRow0125" /> <!-- Number Label -->
 
         <TextView
             android:id="@+id/TVNumberData"
-            style="@style/ElementData"
-            app:layout_constraintBottom_toTopOf="@+id/GRow02"
-            app:layout_constraintEnd_toStartOf="@+id/GColumn03"
-            app:layout_constraintStart_toStartOf="@+id/GColumn02"
-            app:layout_constraintTop_toTopOf="@+id/GRow01"
-            tools:text="103" />
+            style="@style/ElementItemData"
+            app:layout_constraintBottom_toTopOf="@+id/GRow375"
+            app:layout_constraintEnd_toStartOf="@+id/GColumn80"
+            app:layout_constraintStart_toStartOf="@+id/GColumn50"
+            app:layout_constraintTop_toTopOf="@+id/GRow0125"
+            tools:text="103" /> <!-- Number Data -->
 
         <TextView
             android:id="@+id/TVNameLabel"
-            style="@style/ElementName"
+            style="@style/ElementItemName"
             android:text="@string/EIName"
-            app:layout_constraintBottom_toTopOf="@+id/GRow03"
-            app:layout_constraintEnd_toStartOf="@+id/GColumn02"
-            app:layout_constraintStart_toStartOf="@+id/GColumn01"
-            app:layout_constraintTop_toTopOf="@+id/GRow02" />
+            app:layout_constraintBottom_toTopOf="@+id/GRow625"
+            app:layout_constraintEnd_toStartOf="@+id/GColumn50"
+            app:layout_constraintStart_toStartOf="@+id/GColumn20"
+            app:layout_constraintTop_toTopOf="@+id/GRow375" /> <!-- Name Label -->
 
         <TextView
             android:id="@+id/TVNameData"
-            style="@style/ElementData"
-            app:layout_constraintBottom_toTopOf="@+id/GRow03"
-            app:layout_constraintEnd_toStartOf="@+id/GColumn03"
-            app:layout_constraintStart_toStartOf="@+id/GColumn02"
-            app:layout_constraintTop_toTopOf="@+id/GRow02"
-            tools:text="Lawrencium" />
+            style="@style/ElementItemData"
+            app:layout_constraintBottom_toTopOf="@+id/GRow625"
+            app:layout_constraintEnd_toStartOf="@+id/GColumn80"
+            app:layout_constraintStart_toStartOf="@+id/GColumn50"
+            app:layout_constraintTop_toTopOf="@+id/GRow375"
+            tools:text="Lawrencium" /> <!-- Name Data -->
 
         <TextView
             android:id="@+id/TVAtomicMassLabel"
-            style="@style/ElementName"
+            style="@style/ElementItemName"
             android:text="@string/EIAtomicMass"
-            app:layout_constraintBottom_toTopOf="@+id/GRow04"
-            app:layout_constraintEnd_toStartOf="@+id/GColumn02"
-            app:layout_constraintStart_toStartOf="@+id/GColumn01"
-            app:layout_constraintTop_toTopOf="@+id/GRow03" />
+            app:layout_constraintBottom_toTopOf="@+id/GRow875"
+            app:layout_constraintEnd_toStartOf="@+id/GColumn50"
+            app:layout_constraintStart_toStartOf="@+id/GColumn20"
+            app:layout_constraintTop_toTopOf="@+id/GRow625" /> <!-- Atomic Mass Label -->
 
         <TextView
             android:id="@+id/TVAtomicMassData"
-            style="@style/ElementData"
-            app:layout_constraintBottom_toTopOf="@+id/GRow04"
-            app:layout_constraintEnd_toStartOf="@+id/GColumn03"
-            app:layout_constraintStart_toStartOf="@+id/GColumn02"
-            app:layout_constraintTop_toTopOf="@+id/GRow03"
-            tools:text="266" />
+            style="@style/ElementItemData"
+            app:layout_constraintBottom_toTopOf="@+id/GRow875"
+            app:layout_constraintEnd_toStartOf="@+id/GColumn80"
+            app:layout_constraintStart_toStartOf="@+id/GColumn50"
+            app:layout_constraintTop_toTopOf="@+id/GRow625"
+            tools:text="266" /> <!-- Atomic Mass Data -->
 
         <ImageView
             android:id="@+id/IVFavorite"
-            style="@style/Layout00"
-            android:contentDescription="@string/favorite"
-            app:layout_constraintBottom_toBottomOf="@id/GRow06"
-            app:layout_constraintEnd_toEndOf="@id/GColumn04"
-            app:layout_constraintStart_toStartOf="@+id/GColumn03"
-            app:layout_constraintTop_toTopOf="@id/GRow00"
-            app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+            style="@style/ElementItemFavorite"
+            app:layout_constraintBottom_toBottomOf="@id/GRow100"
+            app:layout_constraintEnd_toEndOf="@id/GColumn100"
+            app:layout_constraintStart_toStartOf="@+id/GColumn80"
+            app:layout_constraintTop_toTopOf="@id/GRow00" /> <!-- Favorite -->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

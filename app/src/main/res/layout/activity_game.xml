@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/LayoutMM"
+    tools:context=".GameActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GameRow10"
+        style="@style/Row"
+        app:layout_constraintGuide_percent="0.1" /> <!-- Row 10% -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GameRow15"
+        style="@style/Row"
+        app:layout_constraintGuide_percent="0.15" /> <!-- Row 15% -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GameRow40"
+        style="@style/Row"
+        app:layout_constraintGuide_percent="0.40" /> <!-- Row 40% -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GameRow45"
+        style="@style/Row"
+        app:layout_constraintGuide_percent="0.45" /> <!-- Row 45% -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GameRow616"
+        style="@style/Row"
+        app:layout_constraintGuide_percent="0.6166666666666667" /> <!-- Row 61.6^% -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GameRow783"
+        style="@style/Row"
+        app:layout_constraintGuide_percent="0.7833333333333334" /> <!-- Row 78.3^% -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GameRow95"
+        style="@style/Row"
+        app:layout_constraintGuide_percent="0.95" /> <!-- Row 95% -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GameColumn05"
+        style="@style/Column"
+        app:layout_constraintGuide_percent="0.05" /> <!-- Column 5% -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GameColumn25"
+        style="@style/Column"
+        app:layout_constraintGuide_percent="0.25" /> <!-- Column 25% -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GameColumn275"
+        style="@style/Column"
+        app:layout_constraintGuide_percent="0.275" /> <!-- Column 27.5% -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GameColumn50"
+        style="@style/Column"
+        app:layout_constraintGuide_percent="0.50" /> <!-- Column 50% -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GameColumn725"
+        style="@style/Column"
+        app:layout_constraintGuide_percent="0.725" /> <!-- Column 72.5% -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GameColumn75"
+        style="@style/Column"
+        app:layout_constraintGuide_percent="0.75" /> <!-- Column 75% -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GameColumn95"
+        style="@style/Column"
+        app:layout_constraintGuide_percent="0.95" /> <!-- Column 95% -->
+
+    <TextView
+        android:id="@+id/TVScoreLabel"
+        style="@style/ScoreLabel"
+        app:layout_constraintBottom_toTopOf="@+id/GameRow10"
+        app:layout_constraintEnd_toStartOf="@+id/GameColumn275"
+        app:layout_constraintStart_toStartOf="@+id/GameColumn05"
+        app:layout_constraintTop_toTopOf="parent" /> <!-- Score Label -->
+
+    <TextView
+        android:id="@+id/TVScorePoints"
+        style="@style/Score"
+        app:layout_constraintBottom_toTopOf="@+id/GameRow10"
+        app:layout_constraintEnd_toStartOf="@+id/GameColumn50"
+        app:layout_constraintStart_toStartOf="@+id/GameColumn275"
+        app:layout_constraintTop_toTopOf="parent" /> <!-- Score -->
+
+    <TextView
+        android:id="@+id/TVMaxLabel"
+        style="@style/MaxLabel"
+        app:layout_constraintBottom_toTopOf="@+id/GameRow10"
+        app:layout_constraintEnd_toStartOf="@+id/GameColumn725"
+        app:layout_constraintStart_toStartOf="@+id/GameColumn50"
+        app:layout_constraintTop_toTopOf="parent" /> <!-- Max Label -->
+
+    <TextView
+        android:id="@+id/TVMaxPoints"
+        style="@style/Score"
+        app:layout_constraintBottom_toTopOf="@+id/GameRow10"
+        app:layout_constraintEnd_toStartOf="@+id/GameColumn95"
+        app:layout_constraintStart_toStartOf="@+id/GameColumn725"
+        app:layout_constraintTop_toTopOf="parent" /> <!-- Max Points -->
+
+    <TextView
+        android:id="@+id/TVGSymbol"
+        style="@style/ElementItemSymbol"
+        app:layout_constraintBottom_toTopOf="@+id/GameRow40"
+        app:layout_constraintEnd_toStartOf="@+id/GameColumn75"
+        app:layout_constraintStart_toStartOf="@+id/GameColumn25"
+        app:layout_constraintTop_toTopOf="@+id/GameRow15" /> <!-- Symbol TextView -->
+
+    <Button
+        android:id="@+id/BSolid"
+        style="@style/QuizButtonSolid"
+        app:layout_constraintBottom_toTopOf="@+id/GameRow616"
+        app:layout_constraintEnd_toStartOf="@+id/GameColumn95"
+        app:layout_constraintStart_toStartOf="@+id/GameColumn05"
+        app:layout_constraintTop_toTopOf="@+id/GameRow45" /> <!-- Solid Button -->
+
+    <Button
+        android:id="@+id/BLiquid"
+        style="@style/QuizButtonLiquid"
+        app:layout_constraintBottom_toTopOf="@+id/GameRow783"
+        app:layout_constraintEnd_toStartOf="@+id/GameColumn95"
+        app:layout_constraintStart_toStartOf="@+id/GameColumn05"
+        app:layout_constraintTop_toTopOf="@+id/GameRow616" /> <!-- Liquid Button -->
+
+    <Button
+        android:id="@+id/BGas"
+        style="@style/QuizButtonGas"
+        app:layout_constraintBottom_toTopOf="@+id/GameRow95"
+        app:layout_constraintEnd_toStartOf="@+id/GameColumn95"
+        app:layout_constraintStart_toStartOf="@+id/GameColumn05"
+        app:layout_constraintTop_toTopOf="@+id/GameRow783" /> <!-- Gas Button -->
+</androidx.constraintlayout.widget.ConstraintLayout>

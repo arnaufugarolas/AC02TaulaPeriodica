@@ -41,10 +41,9 @@
         style="@style/Row"
         app:layout_constraintGuide_percent="0.95" />
 
-
     <TextView
         android:id="@+id/TVElementSymbol"
-        style="@style/Symbol"
+        style="@style/ElementItemSymbol"
         app:layout_constraintBottom_toTopOf="@+id/Row25"
         app:layout_constraintEnd_toStartOf="@+id/Column275"
         app:layout_constraintStart_toStartOf="@+id/Column05"
@@ -100,12 +99,6 @@
                 app:layout_constraintGuide_percent="0" />
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/SVColumn65"
-                style="@style/Column"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.65" />
-
-            <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/SVRow0"
                 style="@style/Row"
                 android:orientation="horizontal"
@@ -113,338 +106,337 @@
 
             <TextView
                 android:id="@+id/TVElementNameLabel"
-                style="@style/ElementDetails"
+                style="@style/ElementDetailsLabel"
                 android:text="@string/element_name"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toTopOf="@+id/SVRow0" />
 
             <TextView
-                android:id="@+id/TVElementAppearanceLabel"
-                style="@style/ElementDetails"
-                android:text="@string/element_appearance"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementNameData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementNameLabel" />
 
             <TextView
-                android:id="@+id/TVElementAtomicMassLabel"
-                style="@style/ElementDetails"
-                android:text="@string/atomic_mass"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementAppearanceLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/element_appearance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementNameData" />
+
+            <TextView
+                android:id="@+id/TVElementAppearanceData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementAppearanceLabel" />
 
+            <TextView
+                android:id="@+id/TVElementAtomicMassLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/atomic_mass"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementAppearanceData" />
 
             <TextView
-                android:id="@+id/TVElementBoilLabel"
-                style="@style/ElementDetails"
-                android:text="@string/boiling_point_k"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementAtomicMassData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementAtomicMassLabel" />
 
             <TextView
-                android:id="@+id/TVElementCategoryLabel"
-                style="@style/ElementDetails"
-                android:text="@string/category"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementBoilLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/boiling_point_k"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementAtomicMassData" />
+
+            <TextView
+                android:id="@+id/TVElementBoilData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementBoilLabel" />
 
             <TextView
-                android:id="@+id/TVElementDensityLabel"
-                style="@style/ElementDetails"
-                android:text="@string/density"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementCategoryLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/category"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementBoilData" />
+
+            <TextView
+                android:id="@+id/TVElementCategoryData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementCategoryLabel" />
 
             <TextView
-                android:id="@+id/TVElementDiscoveredByLabel"
-                style="@style/ElementDetails"
-                android:text="@string/discovered_by"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementDensityLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/density"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementCategoryData" />
+
+            <TextView
+                android:id="@+id/TVElementDensityData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementDensityLabel" />
 
             <TextView
-                android:id="@+id/TVElementMeltLabel"
-                style="@style/ElementDetails"
-                android:text="@string/melting_point"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementDiscoveredByLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/discovered_by"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementDensityData" />
+
+            <TextView
+                android:id="@+id/TVElementDiscoveredByData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementDiscoveredByLabel" />
 
             <TextView
-                android:id="@+id/TVElementMolarHeatLabel"
-                style="@style/ElementDetails"
-                android:text="@string/molar_heat_capacity"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementMeltLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/melting_point"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementDiscoveredByData" />
+
+            <TextView
+                android:id="@+id/TVElementMeltData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementMeltLabel" />
 
             <TextView
-                android:id="@+id/TVElementNamedByLabel"
-                style="@style/ElementDetails"
-                android:text="@string/named_by"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementMolarHeatLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/molar_heat_capacity"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementMeltData" />
+
+            <TextView
+                android:id="@+id/TVElementMolarHeatData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementMolarHeatLabel" />
 
             <TextView
-                android:id="@+id/TVElementNumberLabel"
-                style="@style/ElementDetails"
-                android:text="@string/element_number"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementNamedByLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/named_by"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementMolarHeatData" />
+
+            <TextView
+                android:id="@+id/TVElementNamedByData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementNamedByLabel" />
 
             <TextView
-                android:id="@+id/TVElementPeriodLabel"
-                style="@style/ElementDetails"
-                android:text="@string/table_period"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementNumberLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/element_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementNamedByData" />
+
+            <TextView
+                android:id="@+id/TVElementNumberData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementNumberLabel" />
 
             <TextView
-                android:id="@+id/TVElementXPositionLabel"
-                style="@style/ElementDetails"
-                android:text="@string/x_position"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementPeriodLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/table_period"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementNumberData" />
+
+            <TextView
+                android:id="@+id/TVElementPeriodData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementPeriodLabel" />
 
+
+
             <TextView
-                android:id="@+id/TVElementYPositionLabel"
-                style="@style/ElementDetails"
-                android:text="@string/y_position"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementXPositionLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/x_position"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementPeriodData" />
+
+            <TextView
+                android:id="@+id/TVElementXPositionData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementXPositionLabel" />
 
             <TextView
-                android:id="@+id/TVElementPhaseLabel"
-                style="@style/ElementDetails"
-                android:text="@string/element_phase"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementYPositionLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/y_position"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementXPositionData" />
+
+            <TextView
+                android:id="@+id/TVElementYPositionData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementYPositionLabel" />
 
             <TextView
-                android:id="@+id/TVElementShellsLabel"
-                style="@style/ElementDetails"
-                android:text="@string/shells"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementPhaseLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/element_phase"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementYPositionData" />
+
+            <TextView
+                android:id="@+id/TVElementPhaseData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementPhaseLabel" />
 
             <TextView
-                android:id="@+id/TVElementElectronConfigurationLabel"
-                style="@style/ElementDetails"
-                android:text="@string/electron_configuration"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementShellsLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/shells"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementPhaseData" />
+
+            <TextView
+                android:id="@+id/TVElementShellsData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementShellsLabel" />
 
             <TextView
-                android:id="@+id/TVElementElectronConfigurationSemanticLabel"
-                style="@style/ElementDetails"
-                android:text="@string/electron_configuration_semantic"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementElectronConfigurationLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/electron_configuration"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementShellsData" />
+
+            <TextView
+                android:id="@+id/TVElementElectronConfigurationData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementElectronConfigurationLabel" />
 
             <TextView
-                android:id="@+id/TVElementElectronAffinityLabel"
-                style="@style/ElementDetails"
-                android:text="@string/electron_affinity"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementElectronConfigurationSemanticLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/electron_configuration_semantic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementElectronConfigurationData" />
+
+            <TextView
+                android:id="@+id/TVElementElectronConfigurationSemanticData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementElectronConfigurationSemanticLabel" />
 
             <TextView
-                android:id="@+id/TVElementElectronegativityPaulingLabel"
-                style="@style/ElementDetails"
-                android:text="@string/electronegativity_pauling"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementElectronAffinityLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/electron_affinity"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementElectronConfigurationSemanticData" />
+
+            <TextView
+                android:id="@+id/TVElementElectronAffinityData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementElectronAffinityLabel" />
 
             <TextView
-                android:id="@+id/TVElementIonizationEnergiesLabel"
-                style="@style/ElementDetails"
-                android:text="@string/ionization_energies"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementElectronegativityPaulingLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/electronegativity_pauling"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementElectronAffinityData" />
+
+            <TextView
+                android:id="@+id/TVElementElectronegativityPaulingData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementElectronegativityPaulingLabel" />
 
             <TextView
-                android:id="@+id/TVElementSummaryLabel"
-                style="@style/ElementDetails"
-                android:text="@string/summary"
-                app:layout_constraintEnd_toStartOf="@+id/SVColumn65"
+                android:id="@+id/TVElementIonizationEnergiesLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/ionization_energies"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementElectronegativityPaulingData" />
+
+            <TextView
+                android:id="@+id/TVElementIonizationEnergiesData"
+                style="@style/ElementDetailsData"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
                 app:layout_constraintTop_toBottomOf="@+id/TVElementIonizationEnergiesLabel" />
 
             <TextView
-                android:id="@+id/TVElementNameData"
-                style="@style/ElementData"
+                android:id="@+id/TVElementSummaryLabel"
+                style="@style/ElementDetailsLabel"
+                android:text="@string/summary"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/TVElementNameLabel"
-                app:layout_constraintTop_toBottomOf="@+id/SVRow0" />
-
-            <TextView
-                android:id="@+id/TVElementAppearanceData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementNameData" />
-
-            <TextView
-                android:id="@+id/TVElementAtomicMassData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementAppearanceData" />
-
-            <TextView
-                android:id="@+id/TVElementBoilData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementAtomicMassData" />
-
-            <TextView
-                android:id="@+id/TVElementCategoryData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementBoilData" />
-
-            <TextView
-                android:id="@+id/TVElementDensityData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementCategoryData" />
-
-            <TextView
-                android:id="@+id/TVElementDiscoveredByData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementDensityData" />
-
-            <TextView
-                android:id="@+id/TVElementMeltData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementDiscoveredByData" />
-
-            <TextView
-                android:id="@+id/TVElementMolarHeatData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementMeltData" />
-
-            <TextView
-                android:id="@+id/TVElementNamedByData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementMolarHeatData" />
-
-            <TextView
-                android:id="@+id/TVElementNumberData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementNamedByData" />
-
-            <TextView
-                android:id="@+id/TVElementPeriodData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementNumberData" />
-
-            <TextView
-                android:id="@+id/TVElementXPositionData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementPeriodData" />
-
-            <TextView
-                android:id="@+id/TVElementYPositionData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementXPositionData" />
-
-            <TextView
-                android:id="@+id/TVElementPhaseData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementYPositionData" />
-
-            <TextView
-                android:id="@+id/TVElementShellsData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementPhaseData" />
-
-            <TextView
-                android:id="@+id/TVElementElectronConfigurationData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementShellsData" />
-
-            <TextView
-                android:id="@+id/TVElementElectronConfigurationSemanticData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementElectronConfigurationData" />
-
-            <TextView
-                android:id="@+id/TVElementElectronAffinityData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementElectronConfigurationSemanticData" />
-
-            <TextView
-                android:id="@+id/TVElementElectronegativityPaulingData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementElectronAffinityData" />
-
-            <TextView
-                android:id="@+id/TVElementIonizationEnergiesData"
-                style="@style/ElementData"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/SVColumn65"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementElectronegativityPaulingData" />
+                app:layout_constraintStart_toEndOf="@+id/SVColumn00"
+                app:layout_constraintTop_toBottomOf="@+id/TVElementIonizationEnergiesData" />
 
             <TextView
                 android:id="@+id/TVElementSummaryData"
-                style="@style/ElementData"
-                android:breakStrategy="balanced"
-                android:justificationMode="inter_word"
-                android:maxLines="100"
-                android:textAlignment="viewStart"
+                style="@style/ElementDetailsDataSummary"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/SVColumn00"
-                app:layout_constraintTop_toBottomOf="@+id/TVElementSummaryLabel" />
+                app:layout_constraintTop_toBottomOf="@+id/TVElementSummaryLabel"
+                tools:text="Xenon is a chemical element with symbol Xe and atomic number 54. It is a colorless, dense, odorless noble gas, that occurs in the Earth's atmosphere in trace amounts. Although generally unreactive, xenon can undergo a few chemical reactions such as the formation of xenon hexafluoroplatinate, the first noble gas compound to be synthesized." />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

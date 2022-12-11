@@ -40,6 +40,14 @@
         <item name="android:layout_height">0dp</item>
     </style>
 
+    <style name="Layout00Margin15" parent="Layout00">
+        <item name="android:layout_margin">15dp</item>
+    </style>
+
+    <style name="Layout00Margin10" parent="Layout00">
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
     <style name="Row" parent="LayoutWW">
         <item name="android:orientation">horizontal</item>
     </style>
@@ -48,47 +56,80 @@
         <item name="android:orientation">vertical</item>
     </style>
 
-    <style name="Symbol" parent="Layout00">
+    <style name="ElementDetails" parent="Layout0W">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:height">30dp</item>
+    </style>
+
+    <style name="ElementDetailsLabel" parent="ElementDetails">
+        <item name="android:maxLines">1</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:height">35dp</item>
+    </style>
+
+    <style name="ElementDetailsData" parent="ElementDetails">
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="ElementDetailsDataSummary" parent="Layout0W">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">20dp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:justificationMode">inter_word</item>
+    </style>
+
+    <style name="ElementName" parent="ElementDetails">
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:layout_marginStart">5dp</item>
+    </style>
+
+    <style name="ElementItem" parent="Layout0W">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:height">25dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <style name="ElementItemName" parent="ElementItem">
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginEnd">5dp</item>
+    </style>
+
+    <style name="ElementItemData" parent="ElementItem">
+        <item name="android:textAlignment">textEnd</item>
+    </style>
+
+    <style name="ElementItemFavorite" parent="Layout00">
+        <item name="android:contentDescription">@string/favorite</item>
+        <item name="android:src">@drawable/ic_baseline_bookmark_border_24</item>
+    </style>
+
+    <style name="ElementItemSymbol" parent="Layout00">
         <item name="android:maxLines">1</item>
         <item name="android:autoSizeTextType">uniform</item>
         <item name="android:gravity">center</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
     </style>
 
-    <style name="ElementDetails" parent="Layout0M">
-        <item name="android:maxLines">1</item>
-        <item name="android:autoSizeTextType">uniform</item>
-        <item name="android:height">25dp</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="Element" parent="Layout0W">
-        <item name="android:maxLines">1</item>
-        <item name="android:autoSizeTextType">uniform</item>
-    </style>
-
-    <style name="ElementName" parent="Element">
-        <item name="android:textStyle">bold</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
-
-    <style name="ElementData" parent="Element">
-        <item name="android:textAlignment">textEnd</item>
-    </style>
-
-    <style name="SolidSymbol" parent="Symbol">
+    <style name="ElementItemSolidSymbol" parent="ElementItemSymbol">
         <item name="android:textColor">@color/solid</item>
     </style>
 
-    <style name="LiquidSymbol" parent="Symbol">
+    <style name="ElementItemLiquidSymbol" parent="ElementItemSymbol">
         <item name="android:textColor">@color/liquid</item>
     </style>
 
-    <style name="GasSymbol" parent="Symbol">
+    <style name="ElementItemGasSymbol" parent="ElementItemSymbol">
         <item name="android:textColor">@color/gas</item>
     </style>
 
-    <style name="UnknownSymbol" parent="Symbol">
+    <style name="ElementItemUnknownSymbol" parent="ElementItemSymbol">
         <item name="android:textColor">@color/unknown</item>
     </style>
 
@@ -132,12 +173,54 @@
         <item name="android:background">@color/no_category</item>
     </style>
 
-    <style name="Layout00Margin15" parent="Layout00">
-        <item name="android:layout_margin">15dp</item>
-    </style>
-
     <style name="LoadFailed" parent="Layout00Margin15">
         <item name="android:src">@drawable/ic_baseline_cached_24</item>
         <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="QuizButton" parent="Layout00Margin10">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">25dp</item>
+    </style>
+
+    <style name="QuizButtonSolid" parent="QuizButton">
+        <item name="android:backgroundTint">@color/solid</item>
+        <item name="android:text">@string/solid</item>
+    </style>
+
+    <style name="QuizButtonLiquid" parent="QuizButton">
+        <item name="android:backgroundTint">@color/liquid</item>
+        <item name="android:text">@string/liquid</item>
+    </style>
+
+    <style name="QuizButtonGas" parent="QuizButton">
+        <item name="android:backgroundTint">@color/gas</item>
+        <item name="android:text">@string/gas</item>
+    </style>
+
+    <style name="GameLabel" parent="Layout00">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ScoreLabel" parent="GameLabel">
+        <item name="android:text">@string/score</item>
+    </style>
+
+    <style name="MaxLabel" parent="GameLabel">
+        <item name="android:text">@string/max</item>
+    </style>
+
+    <style name="Score" parent="Layout00">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:text">@string/_0</item>
     </style>
 </resources>
