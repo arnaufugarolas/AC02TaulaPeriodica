@@ -42,8 +42,7 @@
     <string name="order_by">Order By</string>
     <string name="symbol">Symbol</string>
     <string name="number">Number</string>
-    <string name="select_all_categories">Select All Categories</string>
-    <string name="all">All</string>
+    <string name="all_categories">All Categories</string>
     <string name="post_transition">Post-Transition</string>
     <string name="unknown">Unknown</string>
     <string name="gas">Gas</string>
@@ -54,4 +53,5 @@
     <string name="_0">0</string>
     <string name="you_lost_the_game">You lost the game</string>
     <string name="lost_message">The element is %1$s and is in the %2$s phase\nFor more information click it.</string>
+    <string name="all_phases">All Phases</string>
 </resources>

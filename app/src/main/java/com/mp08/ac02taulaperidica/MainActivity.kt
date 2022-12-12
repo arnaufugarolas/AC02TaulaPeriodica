@@ -17,8 +17,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var periodicTable: PeriodicTable
     private lateinit var recyclerView: RecyclerView
     private lateinit var elementsToShow: MutableList<Element>
-    private lateinit var filterMenuItems: MutableList<MenuItem>
-    private lateinit var appliedFilters: MutableList<String>
+    private lateinit var categoriesMenuItems: MutableList<MenuItem>
+    private lateinit var phaseMenuItems: MutableList<MenuItem>
+    private lateinit var appliedCategories: MutableList<String>
+    private lateinit var appliedPhases: MutableList<String>
     private var favorite = false
     private var shortBy = "Number"
     private var gson = Gson()
@@ -58,7 +60,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         outState.putString(
-            "appliedFilters", gson.toJson(appliedFilters.toTypedArray(), Array<String>::class.java)
+            "appliedFilters",
+            gson.toJson(appliedCategories.toTypedArray(), Array<String>::class.java)
         )
         outState.putBoolean("favorite", favorite)
         outState.putString("shortBy", shortBy)
@@ -67,7 +70,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        appliedFilters = gson.fromJson(
+        appliedCategories = gson.fromJson(
             savedInstanceState.getString("appliedFilters"), Array<String>::class.java
         ).toMutableList()
         favorite = savedInstanceState.getBoolean("favorite")
@@ -139,15 +142,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupSupportActionBar() {
-        supportActionBar?.title = "Periodic Table"
+        updateActionBarName()
         supportActionBar?.setDisplayUseLogoEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
     }
 
+    private fun updateActionBarName() {
+        if (elementsToShow.size == periodicTable.elements.size) {
+            supportActionBar?.title = "Periodic Table"
+        } else {
+            supportActionBar?.title =
+                "Showing: (${elementsToShow.size}/${periodicTable.elements.size})"
+        }
+    }
+
     private fun setupFilterMenu(subMenu: SubMenu) {
-        val allFiltersSwitch = subMenu.findItem(R.id.MIAll)
+        val allCategoriesSwitch = subMenu.findItem(R.id.MIAllCategories)
+        val allPhasesSwitch = subMenu.findItem(R.id.MIAllPhases)
         val favoriteSwitch = subMenu.findItem(R.id.MIFavorite)
-        filterMenuItems = mutableListOf(
+
+        categoriesMenuItems = mutableListOf(
             subMenu.findItem(R.id.MINonMetal),
             subMenu.findItem(R.id.MINobleGas),
             subMenu.findItem(R.id.MIAlkali),
@@ -160,19 +174,43 @@ class MainActivity : AppCompatActivity() {
             subMenu.findItem(R.id.MINoCategory)
         )
 
-        if (::appliedFilters.isInitialized) {
-            for (filter in appliedFilters) {
-                filterMenuItems.find { it.title == filter }?.isChecked = true
+        phaseMenuItems = mutableListOf(
+            subMenu.findItem(R.id.MIGas),
+            subMenu.findItem(R.id.MILiquid),
+            subMenu.findItem(R.id.MISolid)
+        )
+
+        if (::appliedPhases.isInitialized) {
+            for (phase in appliedPhases) {
+                phaseMenuItems.find { it.title == phase }?.isChecked = true
             }
-            if (appliedFilters.size == filterMenuItems.size) {
-                allFiltersSwitch.isChecked = true
+            if (appliedPhases.size == phaseMenuItems.size) {
+                allPhasesSwitch.isChecked = true
             }
         } else {
-            for (filter in filterMenuItems) {
+            for (phase in phaseMenuItems) phase.isChecked = true
+            allPhasesSwitch.isChecked = true
+            appliedPhases = mutableListOf(
+                "Gas",
+                "Liquid",
+                "Solid"
+            )
+        }
+
+
+        if (::appliedCategories.isInitialized) {
+            for (filter in appliedCategories) {
+                categoriesMenuItems.find { it.title == filter }?.isChecked = true
+            }
+            if (appliedCategories.size == categoriesMenuItems.size) {
+                allCategoriesSwitch.isChecked = true
+            }
+        } else {
+            for (filter in categoriesMenuItems) {
                 filter.isChecked = true
             }
-            allFiltersSwitch.isChecked = true
-            appliedFilters = mutableListOf(
+            allCategoriesSwitch.isChecked = true
+            appliedCategories = mutableListOf(
                 "Non Metal",
                 "Noble Gas",
                 "Alkali",
@@ -193,25 +231,49 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-        allFiltersSwitch.setOnMenuItemClickListener {
+        allCategoriesSwitch.setOnMenuItemClickListener {
             changeFilters(it)
             true
         }
 
-        filterMenuItems.forEach { menuItem ->
+        allPhasesSwitch.setOnMenuItemClickListener {
+            changeFilters(it)
+            true
+        }
+
+        categoriesMenuItems.forEach { menuItem ->
             menuItem.setOnMenuItemClickListener {
                 var allChecked = true
 
                 changeFilters(it)
 
-                for (i in 0 until filterMenuItems.size) {
-                    if (!filterMenuItems[i].isChecked) {
+                for (i in 0 until categoriesMenuItems.size) {
+                    if (!categoriesMenuItems[i].isChecked) {
                         allChecked = false
                         break
                     }
                 }
 
-                allFiltersSwitch.isChecked = allChecked
+                allCategoriesSwitch.isChecked = allChecked
+
+                true
+            }
+        }
+
+        phaseMenuItems.forEach { menuItem ->
+            menuItem.setOnMenuItemClickListener {
+                var allChecked = true
+
+                changeFilters(it)
+
+                for (i in 0 until phaseMenuItems.size) {
+                    if (!phaseMenuItems[i].isChecked) {
+                        allChecked = false
+                        break
+                    }
+                }
+
+                allPhasesSwitch.isChecked = allChecked
 
                 true
             }
@@ -239,9 +301,9 @@ class MainActivity : AppCompatActivity() {
 
         if (item.itemId == R.id.MIFavorite) {
             favorite = item.isChecked
-        } else if (item.itemId == R.id.MIAll) {
+        } else if (item.itemId == R.id.MIAllCategories) {
             if (item.isChecked) {
-                appliedFilters = mutableListOf(
+                appliedCategories = mutableListOf(
                     "Non Metal",
                     "Noble Gas",
                     "Alkali",
@@ -253,14 +315,29 @@ class MainActivity : AppCompatActivity() {
                     "Actinoid",
                     "No Category"
                 )
-                filterMenuItems.forEach { it.isChecked = true }
+                categoriesMenuItems.forEach { it.isChecked = true }
             } else {
-                appliedFilters = mutableListOf()
-                filterMenuItems.forEach { it.isChecked = false }
+                appliedCategories = mutableListOf()
+                categoriesMenuItems.forEach { it.isChecked = false }
             }
-        } else {
-            if (item.isChecked) appliedFilters.add(item.title.toString())
-            else appliedFilters.remove(item.title.toString())
+        } else if (item.itemId == R.id.MIAllPhases) {
+            if (item.isChecked) {
+                appliedPhases = mutableListOf(
+                    "Gas",
+                    "Liquid",
+                    "Solid"
+                )
+                phaseMenuItems.forEach { it.isChecked = true }
+            } else {
+                appliedPhases = mutableListOf()
+                phaseMenuItems.forEach { it.isChecked = false }
+            }
+        } else if (item.groupId == R.id.GCategories) {
+            if (item.isChecked) appliedCategories.add(item.title.toString())
+            else appliedCategories.remove(item.title.toString())
+        } else if (item.groupId == R.id.GPhases) {
+            if (item.isChecked) appliedPhases.add(item.title.toString())
+            else appliedPhases.remove(item.title.toString())
         }
 
         filterElements()
@@ -268,15 +345,22 @@ class MainActivity : AppCompatActivity() {
 
     private fun filterElements() {
         var elementsToFilter = periodicTable.elements.toMutableList()
-        val filteredElements = mutableListOf<Element>()
+        val phaseFilteredElements = mutableListOf<Element>()
+        val categoryFilteredElements = mutableListOf<Element>()
         if (favorite) elementsToFilter = elementsToFilter.filter { it.favorite }.toMutableList()
 
-        for (category in appliedFilters) filteredElements.addAll(elementsToFilter.filter {
-            getCategory(it.category.toString()) == category
-        })
+        for (phase in appliedPhases) {
+            phaseFilteredElements.addAll(elementsToFilter.filter { it.phase == phase })
+        }
 
-        elementsToShow = filteredElements.toMutableList()
+        for (category in appliedCategories) {
+            categoryFilteredElements.addAll(phaseFilteredElements.filter {
+                getCategory(it.category.toString()) == category
+            })
+        }
 
+        elementsToShow = categoryFilteredElements.toMutableList()
+        updateActionBarName()
         shortElements()
     }
 

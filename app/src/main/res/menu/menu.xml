@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:title="@string/periodic_table">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/MIGame"
         android:title="@string/game"
@@ -13,20 +11,51 @@
         app:showAsAction="ifRoom">
         <menu>
             <group
-                android:id="@+id/GFilter"
-                android:checkableBehavior="all"
-                android:menuCategory="alternative">
+                android:id="@+id/GFavorite"
+                android:checkableBehavior="all">
                 <item
                     android:id="@+id/MIFavorite"
                     android:checkable="true"
                     android:checked="false"
                     android:enabled="true"
                     android:title="@string/favorite" />
+            </group>
+            <group
+                android:id="@+id/GPhases"
+                android:checkableBehavior="all">
                 <item
-                    android:id="@+id/MIAll"
+                    android:id="@+id/MIAllPhases"
+                    android:checkable="true"
+                    android:checked="true"
+                    android:enabled="true"
+                    android:title="@string/all_phases" />
+                <item
+                    android:id="@+id/MISolid"
+                    android:checkable="true"
+                    android:checked="true"
+                    android:enabled="true"
+                    android:title="@string/solid" />
+                <item
+                    android:id="@+id/MILiquid"
+                    android:checkable="true"
+                    android:checked="true"
+                    android:enabled="true"
+                    android:title="@string/liquid" />
+                <item
+                    android:id="@+id/MIGas"
+                    android:checkable="true"
+                    android:checked="true"
+                    android:enabled="true"
+                    android:title="@string/gas" />
+            </group>
+            <group
+                android:id="@+id/GCategories"
+                android:checkableBehavior="all">
+                <item
+                    android:id="@+id/MIAllCategories"
                     android:checkable="true"
                     android:enabled="true"
-                    android:title="@string/all" />
+                    android:title="@string/all_categories" />
                 <item
                     android:id="@+id/MINonMetal"
                     android:checkable="true"
@@ -102,6 +131,4 @@
             </group>
         </menu>
     </item>
-
-
 </menu>

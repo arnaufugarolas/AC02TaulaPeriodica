@@ -19,6 +19,7 @@ import com.mp08.ac02taulaperidica.dataClass.PeriodicTable
 class ElementsAdapter(private val context: Context, private val mList: MutableList<Element>) :
     RecyclerView.Adapter<ElementsAdapter.ViewHolder>() {
     private val gson: Gson = Gson()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.element_item, parent, false)
         val viewHolder = ViewHolder(view)
